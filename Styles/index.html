@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sample">
+            <div class="alert" v-bind:style="[properties, minHeight]">
+                Some text
+            </div>
+            <hr>
+            <table class="table table-bordered">
+                <tr v-for="(value, name) in properties">
+                    <td>{{ name }}</td>
+                    <td>
+                        <input type="text" v-model="properties[name]">
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <button class="btn btn-primary" v-on:click="height += 10">
+                + height
+            </button> {{ minHeight }}
+        </div>
+    </div>
+    <script src="script.js "></script>
+</body>
+
+</html>

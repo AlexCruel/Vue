@@ -1,0 +1,14 @@
+html,
+body {
+    margin: 5px;
+    padding: 0;
+}
+
+.form-group {
+    font-weight: bold;
+}
+
+.alert {
+    min-height: 50px;
+    transition: 0.5s;
+}

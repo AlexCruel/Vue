@@ -1,0 +1,11 @@
+v-model.lazy
+v-model.trim
+
+можно одновременно:
+v-model.lazy.trim
+
+v-on:keyup.enter
+
+----------------------------
+v-bind:class="'alert-' + divClass"
+v-bind:class="divClassName"

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sample">
+            <div class="alert" v-bind:class="divClassName">
+                Some text
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="radio" value="info" v-model="divClass">
+                    Info
+                </label>
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                        <input type="radio" value="warning" v-model="divClass">
+                        Warning
+                    </label>
+            </div>
+            <div class="form-check" v-for="(value, name) in flags">
+                <label class="form-check-label">
+                            <input type="checkbox" value="warning" v-model="flags[name]">
+                            {{ name }}
+                        </label>
+            </div>
+            <hr>
+            <table class="table" v-bind:class="flags">
+                <tr>
+                    <td>Title</td>
+                    <td>Some</td>
+                    <td>nz</td>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>Some</td>
+                    <td>nz</td>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>Some</td>
+                    <td>nz</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js "></script>
+</body>
+
+</html>
